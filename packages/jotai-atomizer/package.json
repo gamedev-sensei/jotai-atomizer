@@ -1,9 +1,12 @@
 {
   "name": "@gamedev-sensei/jotai-atomizer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "repository": "git@github.com:gamedev-sensei/jotai-atomizer.git",
   "main": "./dist/index.js",
+  "files": [
+    "/dist"
+  ],
   "scripts": {
     "build": "tsup"
   },

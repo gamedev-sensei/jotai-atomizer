@@ -1,6 +1,6 @@
 {
   "name": "@gamedev-sensei/jotai-atomizer-project",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "git@github.com:gamedev-sensei/jotai-atomizer.git",
   "license": "MIT",
   "scripts": {
