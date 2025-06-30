@@ -1,5 +1,16 @@
 # @gamedev-sensei/react-atomizer
 
+## 2.2.0
+
+### Minor Changes
+
+- 2c13a6e: Renamed ListAtomTime to WritableListAtomItem
+
+### Patch Changes
+
+- Updated dependencies [2c13a6e]
+  - @gamedev-sensei/jotai-atomizer@2.2.0
+
 ## 2.1.1
 
 ### Patch Changes
