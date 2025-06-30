@@ -1,13 +1,26 @@
-import {PrimitiveAtom} from "jotai";
+import {PrimitiveAtom, WritableAtom} from "jotai";
 import {focusAtom} from "jotai-optics";
 import {splitAtom} from "jotai/utils";
 
-type ListAtom<E, K> = ReturnType<typeof splitAtom<E, K>>
+export type SplitAtomAction<T> = {
+    type: 'remove'
+    atom: PrimitiveAtom<T>
+} | {
+    type: 'insert'
+    value: T
+    before?: PrimitiveAtom<T>
+} | {
+    type: 'move'
+    atom: PrimitiveAtom<T>
+    before?: PrimitiveAtom<T>
+}
+
+type WritableListAtom<E, K> = WritableAtom<PrimitiveAtom<E>[], [SplitAtomAction<E>], void>
 
 export type Atomized<T> = {
     atom: PrimitiveAtom<T>
 } & (T extends (infer E)[] ? {
-    split<K>(keyExtractor: ((v: E) => K)): ListAtom<E, K>
+    split<K>(keyExtractor: ((v: E) => K)): WritableListAtom<E, K>
 } : T extends object ? { [K in Exclude<keyof T, "atom" | "split">]: Atomized<T[K]> } : {})
 
 export function atomize<T>(valueAtom: PrimitiveAtom<T>): Atomized<T> {
@@ -19,12 +32,12 @@ export function atomize<T>(valueAtom: PrimitiveAtom<T>): Atomized<T> {
             if (typedKey === "atom") return valueAtom
 
             if (typedKey === "split") {
-                const cachedAtoms = new Map<(v: unknown) => unknown, ListAtom<T[keyof T], unknown>>()
+                const cachedAtoms = new Map<(v: unknown) => unknown, WritableListAtom<T[keyof T], unknown>>()
 
-                return (typedTarget["split" as keyof Atomized<T>] as (extractor: (v: unknown) => unknown) => ListAtom<T[keyof T], unknown>) ??=
+                return (typedTarget["split" as keyof Atomized<T>] as (extractor: (v: unknown) => unknown) => WritableListAtom<T[keyof T], unknown>) ??=
                     (extractor: (v: unknown) => unknown) => {
                         if (!cachedAtoms.has(extractor))
-                            cachedAtoms.set(extractor, splitAtom(valueAtom as unknown as PrimitiveAtom<unknown[]>, extractor) as ListAtom<T[keyof T], unknown>)
+                            cachedAtoms.set(extractor, splitAtom(valueAtom as unknown as PrimitiveAtom<unknown[]>, extractor) as WritableListAtom<T[keyof T], unknown>)
                         return cachedAtoms.get(extractor)!
                     }
             }
