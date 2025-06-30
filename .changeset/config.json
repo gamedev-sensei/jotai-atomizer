@@ -2,8 +2,8 @@
   "$schema": "https://unpkg.com/@changesets/config@3.1.1/schema.json",
   "changelog": "@changesets/cli/changelog",
   "commit": false,
-  "linked": [
-    ["@gamedev-sensei/jotai-atomizer", "@gamedev-sensei/react-atomizer"]
+  "fixed": [
+    ["@gamedev-sensei/*"]
   ],
   "access": "public",
   "baseBranch": "main",

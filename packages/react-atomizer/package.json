@@ -1,6 +1,6 @@
 {
   "name": "@gamedev-sensei/react-atomizer",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "license": "MIT",
   "repository": "git@github.com:gamedev-sensei/jotai-atomizer.git",
   "main": "./dist/index.js",
@@ -11,7 +11,7 @@
     "build": "tsup"
   },
   "dependencies": {
-    "@gamedev-sensei/jotai-atomizer": "workspace:*",
+    "@gamedev-sensei/jotai-atomizer": "2.1.1",
     "jotai": "^2.12.5",
     "jotai-optics": "^0.4.0",
     "optics-ts": "^2.4.1",
