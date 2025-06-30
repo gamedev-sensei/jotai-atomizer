@@ -5,8 +5,7 @@
   "repository": "git@github.com:gamedev-sensei/jotai-atomizer.git",
   "main": "./dist/index.js",
   "scripts": {
-    "build": "tsup",
-    "release": "yarn npm publish --provenance --access public"
+    "build": "tsup"
   },
   "dependencies": {
     "jotai": "^2.12.5",

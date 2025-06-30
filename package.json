@@ -4,8 +4,7 @@
   "repository": "git@github.com:gamedev-sensei/jotai-atomizer.git",
   "license": "MIT",
   "scripts": {
-    "build": "turbo build",
-    "release": "turbo release"
+    "build": "turbo build"
   },
   "workspaces": [
     "packages/*"

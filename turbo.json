@@ -4,9 +4,6 @@
         "build": {
             "dependsOn": ["^build"],
             "outputs": ["dist/**"]
-        },
-        "release": {
-            "dependsOn": ["^release", "build"]
         }
     },
     "dangerouslyDisablePackageManagerCheck": true

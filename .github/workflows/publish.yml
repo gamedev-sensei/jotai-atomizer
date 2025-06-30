@@ -20,7 +20,10 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies
         run: yarn install
+      - name: Build packages
+        run: yarn build
       - name: Publish to npm
-        run: yarn release
+        run: yarn npm publish --workspaces --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_CONFIG_PROVENANCE: true
