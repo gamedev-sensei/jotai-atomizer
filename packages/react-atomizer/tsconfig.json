@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
-    "lib": ["esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
+    "target": "esnext",
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -10,8 +15,14 @@
     "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "jsx": "preserve",
     "rootDir": "src",
     "outDir": "dist",
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
     "paths": {
       "@/*": ["./src/*"]
     }

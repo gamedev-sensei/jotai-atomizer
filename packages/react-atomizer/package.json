@@ -1,5 +1,5 @@
 {
-  "name": "@gamedev-sensei/jotai-atomizer",
+  "name": "@gamedev-sensei/react-atomizer",
   "version": "2.1.0",
   "license": "MIT",
   "repository": "git@github.com:gamedev-sensei/jotai-atomizer.git",
@@ -11,12 +11,18 @@
     "build": "tsup"
   },
   "dependencies": {
-    "jotai": ">=2",
-    "jotai-optics": "^0.4",
-    "optics-ts": ">=2"
+    "@gamedev-sensei/jotai-atomizer": "workspace:*",
+    "jotai": "^2.12.5",
+    "jotai-optics": "^0.4.0",
+    "optics-ts": "^2.4.1",
+    "react": ">=18",
+    "react-dom": ">=18",
+    "remeda": "^2.23.2"
   },
   "devDependencies": {
     "@types/node": "^24.0.7",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
     "esbuild-plugin-alias": "^0.2.1",
     "tsup": "^8.5.0",
     "typescript": "^5.8.3"
