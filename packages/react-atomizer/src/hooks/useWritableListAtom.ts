@@ -2,13 +2,13 @@ import {PrimitiveAtom, useAtom} from "jotai"
 import {WritableListAtom} from "@gamedev-sensei/jotai-atomizer";
 import {useMemo} from "react";
 
-export type ListAtomItem<T> = {
+export type WritableListAtomItem<T> = {
     id: string
     atom: PrimitiveAtom<T>
     remove(): void
 }
 export type UseListAtomResult<T> = {
-    atoms: ListAtomItem<T>[]
+    atoms: WritableListAtomItem<T>[]
     append(item: T): void
     insert(item: T, beforeIndex: number): void
     move(oldIndex: number, newIndex: number): void
