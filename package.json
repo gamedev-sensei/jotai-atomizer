@@ -1,0 +1,20 @@
+{
+  "name": "@gamedev-sensei/jotai-atomizer-project",
+  "version": "1.0.0",
+  "repository": "git@github.com:gamedev-sensei/jotai-atomizer.git",
+  "license": "MIT",
+  "scripts": {
+    "build": "turbo build",
+    "release": "turbo release"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "private": true,
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "turbo": "^2.5.4",
+    "typescript": "^5.8.3"
+  },
+  "packageManager": "yarn@4.9.2"
+}
