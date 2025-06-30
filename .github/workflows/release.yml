@@ -7,6 +7,8 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: Enable Corepack
+        run: corepack enable
       - uses: actions/checkout@v4
       - name: Use Node.js 20.x
         uses: actions/setup-node@v4
