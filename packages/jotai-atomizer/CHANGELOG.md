@@ -1,5 +1,11 @@
 # @gamedev-sensei/jotai-atomizer
 
+## 3.0.0
+
+### Minor Changes
+
+- 9b387af: Started using package-extras
+
 ## 2.2.0
 
 ### Minor Changes

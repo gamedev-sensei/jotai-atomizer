@@ -1,5 +1,20 @@
 # @gamedev-sensei/react-atomizer
 
+## 3.0.0
+
+### Major Changes
+
+- 9b387af: Moved useDerived to react-extras
+
+### Minor Changes
+
+- 9b387af: Started using package-extras
+
+### Patch Changes
+
+- Updated dependencies [9b387af]
+  - @gamedev-sensei/jotai-atomizer@3.0.0
+
 ## 2.2.0
 
 ### Minor Changes
