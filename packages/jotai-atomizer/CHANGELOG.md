@@ -1,5 +1,11 @@
 # @gamedev-sensei/jotai-atomizer
 
+## 3.0.1
+
+### Patch Changes
+
+- 68a2310: Fixed typecheck
+
 ## 3.0.0
 
 ### Minor Changes

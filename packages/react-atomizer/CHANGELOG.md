@@ -1,5 +1,13 @@
 # @gamedev-sensei/react-atomizer
 
+## 3.0.1
+
+### Patch Changes
+
+- 68a2310: Fixed typecheck
+- Updated dependencies [68a2310]
+  - @gamedev-sensei/jotai-atomizer@3.0.1
+
 ## 3.0.0
 
 ### Major Changes
