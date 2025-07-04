@@ -1,6 +1,6 @@
 import {PrimitiveAtom, useAtomValue} from "jotai";
 import {selectAtom} from "jotai/utils";
-import {useDerived} from "./useDerived";
+import {useDerived} from "@gamedev-sensei/react-extras";
 
 type UnionPickProps<T extends object, P extends keyof T> = T extends any ? Pick<T, P> : never
 function unionPick<T extends object, P extends keyof T>(obj: T, props: Readonly<P[]>): UnionPickProps<T, P> {

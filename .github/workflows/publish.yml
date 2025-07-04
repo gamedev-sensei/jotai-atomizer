@@ -1,5 +1,9 @@
 name: Publish Package to npmjs
 on:
+  workflow_run:
+    workflows: [Release]
+    types: [completed]
+  workflow_dispatch:
   release:
     types: [published]
 jobs:
@@ -8,6 +12,9 @@ jobs:
     permissions:
       contents: read
       id-token: write
+    if: github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'release' ||
+      (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
     steps:
       - name: Enable Corepack
         run: corepack enable

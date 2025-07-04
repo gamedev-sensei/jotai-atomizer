@@ -3,12 +3,25 @@
   "version": "2.2.0",
   "license": "MIT",
   "repository": "git@github.com:gamedev-sensei/jotai-atomizer.git",
-  "main": "./dist/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "files": [
     "/dist"
   ],
+  "exports": {
+    "import": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "require": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
-    "build": "tsup"
+    "type-check": "tsc --noEmit",
+    "build": "tsup && attw --pack ."
   },
   "dependencies": {
     "jotai": ">=2",
@@ -16,6 +29,9 @@
     "optics-ts": ">=2"
   },
   "devDependencies": {
+    "@arethetypeswrong/cli": "^0.18.2",
+    "@gamedev-sensei/ts-config": "^1.1.2",
+    "@gamedev-sensei/tsup-config": "^1.1.2",
     "@types/node": "^24.0.7",
     "esbuild-plugin-alias": "^0.2.1",
     "tsup": "^8.5.0",
