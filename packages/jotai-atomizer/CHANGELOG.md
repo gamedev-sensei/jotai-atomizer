@@ -1,5 +1,12 @@
 # @gamedev-sensei/jotai-atomizer
 
+## 3.0.2
+
+### Patch Changes
+
+- 5ec268a: Removed unused packages
+- 51af33d: Switched from tsup to tsdown
+
 ## 3.0.1
 
 ### Patch Changes
