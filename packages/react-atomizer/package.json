@@ -21,11 +21,11 @@
   },
   "scripts": {
     "type-check": "tsc --noEmit",
-    "build": "tsup && attw --pack ."
+    "build": "tsdown && attw --pack ."
   },
   "dependencies": {
     "@gamedev-sensei/jotai-atomizer": "3.0.1",
-    "@gamedev-sensei/react-extras": "^1.1.2",
+    "@gamedev-sensei/react-extras": "^2.0.0",
     "jotai": "^2.12.5",
     "jotai-optics": "^0.4.0",
     "optics-ts": "^2.4.1",
@@ -35,12 +35,12 @@
   },
   "devDependencies": {
     "@arethetypeswrong/cli": "^0.18.2",
-    "@gamedev-sensei/ts-config": "^1.1.2",
-    "@gamedev-sensei/tsup-config": "^1.1.2",
+    "@gamedev-sensei/ts-config": "^2.0.0",
+    "@gamedev-sensei/tsdown-config": "^2.0.0",
     "@types/node": "^24.0.7",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "tsup": "^8.5.0",
+    "tsdown": "^0.12.9",
     "typescript": "^5.8.3"
   }
 }
