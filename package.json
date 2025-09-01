@@ -1,21 +1,22 @@
 {
-  "name": "@gamedev-sensei/jotai-atomizer-project",
-  "repository": "git@github.com:gamedev-sensei/jotai-atomizer.git",
-  "license": "MIT",
-  "scripts": {
-    "type-check": "turbo type-check",
-    "build": "turbo build"
-  },
-  "workspaces": [
-    "packages/*"
-  ],
-  "private": true,
-  "packageManager": "yarn@4.9.2",
-  "dependencies": {
-    "@arethetypeswrong/cli": "^0.18.2",
-    "@changesets/cli": "^2.29.5",
-    "tsdown": "^0.12.9",
-    "turbo": "^2.5.4",
-    "typescript": "^5.8.3"
-  }
+    "name": "@gamedev-sensei/jotai-atomizer-project",
+    "repository": "git@github.com:gamedev-sensei/jotai-atomizer.git",
+    "license": "MIT",
+    "scripts": {
+        "type-check": "turbo type-check",
+        "build": "turbo build",
+        "bump": "changeset"
+    },
+    "workspaces": [
+        "packages/*"
+    ],
+    "private": true,
+    "packageManager": "yarn@4.9.2",
+    "dependencies": {
+        "@arethetypeswrong/cli": "^0.18.2",
+        "@changesets/cli": "^2.29.5",
+        "tsdown": "^0.12.9",
+        "turbo": "^2.5.4",
+        "typescript": "^5.8.3"
+    }
 }
