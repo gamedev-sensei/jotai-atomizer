@@ -388,7 +388,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@gamedev-sensei/jotai-atomizer@npm:3.0.2, @gamedev-sensei/jotai-atomizer@workspace:packages/jotai-atomizer":
+"@gamedev-sensei/jotai-atomizer@npm:3.1.0, @gamedev-sensei/jotai-atomizer@workspace:packages/jotai-atomizer":
   version: 0.0.0-use.local
   resolution: "@gamedev-sensei/jotai-atomizer@workspace:packages/jotai-atomizer"
   dependencies:
@@ -409,7 +409,7 @@ __metadata:
   resolution: "@gamedev-sensei/react-atomizer@workspace:packages/react-atomizer"
   dependencies:
     "@arethetypeswrong/cli": "npm:^0.18.2"
-    "@gamedev-sensei/jotai-atomizer": "npm:3.0.2"
+    "@gamedev-sensei/jotai-atomizer": "npm:3.1.0"
     "@gamedev-sensei/react-extras": "npm:^2.0.0"
     "@gamedev-sensei/ts-config": "npm:^2.0.0"
     "@gamedev-sensei/tsdown-config": "npm:^2.0.0"

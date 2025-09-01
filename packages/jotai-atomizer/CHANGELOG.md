@@ -1,5 +1,11 @@
 # @gamedev-sensei/jotai-atomizer
 
+## 3.1.0
+
+### Minor Changes
+
+- 1784612: Added optionalAtom - utility to handle optional data
+
 ## 3.0.2
 
 ### Patch Changes
