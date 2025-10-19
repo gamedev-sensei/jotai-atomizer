@@ -1,5 +1,11 @@
 # @gamedev-sensei/jotai-atomizer
 
+## 3.2.0
+
+### Minor Changes
+
+- 14082fd: Added atom mapping utility `mappedAtom`
+
 ## 3.1.0
 
 ### Minor Changes
