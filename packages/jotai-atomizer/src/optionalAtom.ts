@@ -1,7 +1,7 @@
-import {atom, PrimitiveAtom} from "jotai";
+import {Atom, atom, PrimitiveAtom} from "jotai";
 import {mappedAtom} from "@/mappedAtom";
 
-export function optionalAtom<T>(sourceAtom: PrimitiveAtom<T | undefined>) {
+export function optionalAtom<T>(sourceAtom: PrimitiveAtom<T | undefined>): Atom<PrimitiveAtom<T> | undefined> {
     let atomCache: PrimitiveAtom<T> | undefined = undefined
 
     return atom<PrimitiveAtom<T> | undefined>(get => {
