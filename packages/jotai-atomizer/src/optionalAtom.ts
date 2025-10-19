@@ -1,4 +1,5 @@
 import {atom, PrimitiveAtom} from "jotai";
+import {mappedAtom} from "@/mappedAtom";
 
 export function optionalAtom<T>(sourceAtom: PrimitiveAtom<T | undefined>) {
     let atomCache: PrimitiveAtom<T> | undefined = undefined
@@ -8,9 +9,7 @@ export function optionalAtom<T>(sourceAtom: PrimitiveAtom<T | undefined>) {
 
         if (v === undefined) return undefined
 
-        atomCache ??= atom(get => get(sourceAtom) ?? v, (_get, set, update) => {
-            set(sourceAtom, update instanceof Function ? newValue => update(newValue ?? v): update)
-        })
+        atomCache ??= mappedAtom<T | undefined, T>(sourceAtom, value => value ?? v, value => value)
 
         return atomCache
     })
