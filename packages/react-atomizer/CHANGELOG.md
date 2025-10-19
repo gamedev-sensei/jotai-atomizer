@@ -1,5 +1,12 @@
 # @gamedev-sensei/react-atomizer
 
+## 3.2.1
+
+### Patch Changes
+
+- Updated dependencies [c15c935]
+  - @gamedev-sensei/jotai-atomizer@3.2.1
+
 ## 3.2.0
 
 ### Patch Changes

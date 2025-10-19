@@ -1,5 +1,11 @@
 # @gamedev-sensei/jotai-atomizer
 
+## 3.2.1
+
+### Patch Changes
+
+- c15c935: Added readme to jotai-atomizer
+
 ## 3.2.0
 
 ### Minor Changes
